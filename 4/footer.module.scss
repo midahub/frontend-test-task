@@ -1,0 +1,86 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  background: #26292e;
+
+  border-top: 1px solid rgba(172, 175, 181, 0.1);
+  border-radius: 24px 24px 0 0;
+
+  z-index: 100;
+  &__container {
+    padding: 5px 0px 5px 0px;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    justify-content: space-between;
+
+    position: relative;
+  }
+}
+
+.button_fixed {
+  bottom: 75px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+.block {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+
+  width: 100%;
+
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 156%;
+  text-align: center;
+  color: #93979f;
+
+  svg {
+    transition: all 0.5s;
+
+    fill: none;
+    & path {
+      transition: all 0.5s;
+
+      stroke: #93979f;
+    }
+  }
+
+  &_active {
+    svg {
+      transition: all 0.5s;
+      fill: #f5a733;
+      & path {
+        stroke: #f5a733;
+      }
+    }
+
+    color: #f5a733;
+    &_sec {
+      svg {
+        transition: all 0.5s;
+        & path {
+          stroke: #f5a733;
+        }
+      }
+
+      color: #f5a733;
+    }
+  }
+}
+
+@media (max-width: 411px) {
+  .button_fixed {
+    bottom: 90px;
+  }
+}
